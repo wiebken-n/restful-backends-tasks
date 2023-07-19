@@ -2,20 +2,24 @@ const quoteBtn = document.querySelector(".btn-get-quote");
 const quoteText = document.querySelector(".quote-text");
 const quoteAuthor = document.querySelector(".quote-author");
 
-let randomQuoteText = "this is a random quote. yay";
-let randomQuoteAuthor = "this is some random dude. yay";
+const defaultQuote = "Utinni.";
+const defaultAuthor = "Anonymous resident of Bestine, Tatooine";
 
-let promise = fetch("https://dummy-apis.netlify.app/api/quote");
-promise.then((response) => {
-  return response.json();
+window.addEventListener("load", (event) => {
+  quoteText.innerText = defaultQuote;
+  quoteAuthor.innerText = defaultAuthor;
 });
-console.log(promise);
 
 quoteBtn.addEventListener("click", function (event) {
-  renderQuote();
-});
+  let promise = fetch("https://dummy-apis.netlify.app/api/quote");
+  let promise2 = promise.then((response) => {
+    return response.json();
+  });
 
-function renderQuote() {
-  quoteText.appendChild(document.createTextNode(randomQuoteText));
-  quoteAuthor.appendChild(document.createTextNode(randomQuoteAuthor));
-}
+  promise2.then((data) => {
+    const quote = data.quote;
+    const author = data.author;
+    quoteText.innerText = quote;
+    quoteAuthor.innerText = author;
+  });
+});

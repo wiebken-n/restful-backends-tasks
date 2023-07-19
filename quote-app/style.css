@@ -2,10 +2,75 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  _border: 2px solid red;
 }
 
-html,
-body,
+body {
+  height: 100vh;
+}
+
+header {
+  height: 15rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 2.7rem;
+  background-color: rgb(165, 207, 255);
+}
+h1 {
+  font-family: "Abril Fatface", display;
+  text-align: center;
+  font-size: 3.5rem;
+  margin-left: 5rem;
+}
+
+.btn-get-quote {
+  cursor: pointer;
+  background-color: beige;
+  border: 2px rgb(37, 37, 37) solid;
+  width: 7rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  transition: background-color 100ms ease;
+  margin-right: 5rem;
+}
+
+.btn-get-quote:hover {
+  background-color: goldenrod;
+}
+
+.btn-get-quote:active {
+  background-color: rgb(255, 218, 123);
+}
 main {
-  height: 100%;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.quote-text {
+  font-family: "Beth Ellen", handwriting;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.quote-author {
+  max-width: 10rem;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8rem;
 }
