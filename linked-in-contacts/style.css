@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  border: 2px solid red;
+  border: 2px solid blue;
 }
 
 body,
@@ -36,7 +36,15 @@ p {
 }
 
 .contact-cards-container {
-  width: 10rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.contact-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
