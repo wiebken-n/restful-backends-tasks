@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border: 2px solid red;
+}
+
+body,
+html {
+  height: 100vh;
+}
+
+p {
+  margin: 0;
+}
+.contact-cards {
+  width: fit-content;
+}
+
+.pending-invitations-container {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.suggestion-management-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-cards-container {
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+}
